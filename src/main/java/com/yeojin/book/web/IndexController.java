@@ -18,10 +18,10 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
+   // private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model, @LoginUser SessionUser user){
+    public String index(Model model, @LoginUser SessionUser user){//@LoginUser 어노테이션 추가
         model.addAttribute("posts", postsService.findAllDesc());
 //        SessionUser user = (SessionUser) httpSession.getAttribute("user");//1)
         //로그인 성공 시 httpSession.getAttribute("user")에서 값을 가져올 수 있음.
