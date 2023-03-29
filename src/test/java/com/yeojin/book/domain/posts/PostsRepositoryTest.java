@@ -13,7 +13,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest//H2 database 설정
+//@SpringBootTest//H2 database 설정
 public class PostsRepositoryTest {
 
     @Autowired
