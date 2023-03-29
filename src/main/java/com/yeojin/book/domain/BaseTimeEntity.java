@@ -1,4 +1,4 @@
-package com.yeojin.book.domain.posts;
+package com.yeojin.book.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

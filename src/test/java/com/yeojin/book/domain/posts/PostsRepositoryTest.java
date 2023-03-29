@@ -48,7 +48,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void BaseTimeEntity_post(){
+    public void BaseTimeEntity_등록(){
         //given
         LocalDateTime now = LocalDateTime.of(2022,12,28,0,0,0);
         postsRepository.save(Posts.builder()

@@ -1,6 +1,6 @@
 package com.yeojin.book.domain.user;
 
-import com.yeojin.book.domain.posts.BaseTimeEntity;
+import com.yeojin.book.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

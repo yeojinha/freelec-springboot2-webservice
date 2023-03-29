@@ -17,7 +17,7 @@ public class PostsApiController {
     public Long save(@RequestBody PostsSaveRequestDto requestDto){
         return postsService.save(requestDto);
     }
-    //@RequestBody json이 java 객체로 conversioon되며 그 역도 가능
+    //@RequestBody json이 java 객체로 conversion되며 그 역도 가능
 
     @PutMapping("/api/v1/posts/{id}")//
     public Long update (@PathVariable("id") Long id, @RequestBody PostsUpdateRequestDto requestDto){
