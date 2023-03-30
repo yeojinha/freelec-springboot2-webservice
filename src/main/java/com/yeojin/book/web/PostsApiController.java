@@ -1,12 +1,14 @@
 package com.yeojin.book.web;
 
 import com.yeojin.book.service.posts.PostsService;
+import com.yeojin.book.web.dto.PostsListResponseDto;
 import com.yeojin.book.web.dto.PostsResponseDto;
 import com.yeojin.book.web.dto.PostsSaveRequestDto;
 
 import com.yeojin.book.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController//RestController를 붙이면, 컨트롤러 클래스 하위 메서드에 @ResponseBody 어노테이션을 붙이지 않아도 문자열과 JSON 등을 전송할 수 있습니다.
@@ -33,5 +35,9 @@ public class PostsApiController {
     public Long delete(@PathVariable("id") Long id){
         postsService.delete(id);
         return id;
+    }
+    @GetMapping("/api/v1/posts/list")
+    public List<PostsListResponseDto> findAll() {
+        return postsService.findAllDesc();
     }
 }
